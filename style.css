@@ -43,11 +43,6 @@ main {
     min-height: 34rem;
 }
 
-.instagram-login img {
-    width: 100%;
-    object-fit: cover;
-}
-
 .group {
     display: flex;
     justify-content: start;
@@ -63,7 +58,7 @@ main {
     min-height: 19rem;
 }
 
-.instagram-login img {
+.logo-instagram {
     width: 50%;
     margin-top: 20px;
 }
@@ -122,4 +117,27 @@ main {
     font-size: 13px;
     font-weight: bold;
     margin: 0 10px;
+}
+
+.btn-login-facebook {
+    display: flex;
+    align-items: flex-start;
+    color: #4267B2;
+    font-weight: bold;
+}
+
+.btn-login-facebook div {
+    height: 15px;
+    display: flex;
+    width: 13px;
+    background-color: white;
+    position: relative;
+    margin-right: 10px;
+}
+
+.btn-login-facebook div img {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: -1px;
 }
