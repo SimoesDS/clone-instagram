@@ -1,3 +1,10 @@
+:root {
+    --background-color: #1C1E1E;
+    --form-color: #0C0F0F;
+    --border-color: #707070;
+    --logo-color: black;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,8 +17,9 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(28, 30, 30);
+    background-color: var(--background-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -20,7 +28,7 @@ main {
     align-items: center;
     justify-content: center;
     max-width: 935px;
-    height: 100vh;
+    margin: 0 auto;
 }
 
 .instagram-phone {
@@ -50,8 +58,8 @@ main {
     flex-direction: column;
     width: 100%;
     padding: 1.3rem;
-    border: 0.5px solid #707070;
-    background-color: rgb(12, 15, 15);
+    border: 0.5px solid var(--border-color);
+    background-color: var(--form-color);
 }
 
 .group:nth-child(1) {
@@ -61,6 +69,7 @@ main {
 .logo-instagram {
     width: 50%;
     margin-top: 20px;
+    background-color: var(--logo-color);
 }
 
 .instagram-login .group form {
@@ -77,13 +86,13 @@ main {
     margin: 3px 0;
     height: 35px;
     padding: 0 7px;
-    background-color: rgb(28, 30, 30);
-    border: 1px solid #707070;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
     color: white;
 }
 
 .instagram-login .group form input::placeholder {
-    color: #707070;
+    color: var(--border-color);
 }
 
 .btn-login {
@@ -108,11 +117,11 @@ main {
 .alternative-login div {
     width: 100%;
     height: 1px;
-    background-color: #707070;
+    background-color: var(--border-color);
 }
 
 .alternative-login p {
-    color: #707070;
+    color: var(--border-color);
     font-size: 13px;
     font-weight: bold;
     margin: 0 10px;
@@ -205,12 +214,66 @@ main {
 @media screen and (max-width: 500px) {
     .group {
         border: transparent;
-        background-color: rgb(28, 30, 30);
+        background-color: var(--background-color);
     }
 }
 
 @media screen and (max-width: 350px) {
     .instagram-login {
         width: auto;
+    }
+}
+
+/** Botão alterar thema **/
+header {
+    width: 810px;
+    margin: 0 auto 50px auto;
+}
+
+.chose-theme {
+    /* display: flex;
+    justify-content: flex-end; */
+    position: absolute;
+}
+
+.chose-theme input[type="checkbox"] {
+    position: relative;
+    width: 70px;
+    height: 25px;
+    appearance: none;
+    background-color: white;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+}
+
+.chose-theme input:checked[type="checkbox"] {
+    background-color: var(--form-color);
+}
+
+.chose-theme input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    transform: scale(1.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    background-color: var(--form-color);
+    transition: .5s;
+}
+
+.chose-theme input:checked[type="checkbox"]:before {
+    left: 40px;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 940px) {
+    header {
+        width: 350px;
     }
 }

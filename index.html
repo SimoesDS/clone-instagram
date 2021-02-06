@@ -7,6 +7,11 @@
     <title>Instagram</title>
 </head>
 <body>
+    <header>
+        <div class="chose-theme">
+            <input type="checkbox" onchange="changeTheme(this)">
+        </div>
+    </header>
     <main>
         <div class="instagram-phone">
             <img src="./img/instagram-app.png" alt="Aplicativo do instagram">
@@ -44,8 +49,20 @@
             </div>
         </div>        
     </main>
-    <footer>
 
-    </footer>
+    <script>
+        function changeTheme(checkbox) {
+            const colorsOfTheme = {
+                
+            };
+            // --background-color: #1C1E1E;
+            // --form-color: #0C0F0F;
+            // --border-color: #707070;
+
+            document.documentElement.style.setProperty('--background-color', '#FAFAFA');
+            document.documentElement.style.setProperty('--form-color', 'white');
+            document.documentElement.style.setProperty('--background-color', 'lightgray');
+        }
+    </script>
 </body>
 </html>
