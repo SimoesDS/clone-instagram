@@ -256,7 +256,7 @@ header {
 }
 
 .chose-theme input:checked[type="checkbox"] {
-    background-color: var(--form-color);
+    background-color: black;
 }
 
 .chose-theme input[type="checkbox"]:before {
