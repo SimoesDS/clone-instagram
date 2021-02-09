@@ -2,7 +2,8 @@
     --background-color: #1C1E1E;
     --form-color: #0C0F0F;
     --border-color: #707070;
-    --logo-color: black;
+    --text-color: #FFFFFF;
+    --color-filter: 
 }
 
 * {
@@ -12,6 +13,7 @@
     text-decoration: none;
     font-family: sans-serif;
     font-size: 14px;
+    color: var(--text-color);
 }
 
 body {
@@ -69,7 +71,14 @@ main {
 .logo-instagram {
     width: 50%;
     margin-top: 20px;
-    background-color: var(--logo-color);
+}
+
+.light-mode {
+    filter: invert(0%) sepia(96%) saturate(7427%) hue-rotate(320deg) brightness(88%) contrast(100%);
+}
+
+.dark-mode {
+    filter: invert(100%) sepia(100%) saturate(16%) hue-rotate(292deg) brightness(105%) contrast(105%);
 }
 
 .instagram-login .group form {
@@ -152,14 +161,12 @@ main {
 }
 
 .btn-forgot-password {
-    color: white;
     font-size: 13px;
     padding: 6px;
     margin-top: 5px;
 }
 
 .dont-have-account {
-    color: white;
     width: 100%;
     margin: 10px auto;
     text-align: center;
